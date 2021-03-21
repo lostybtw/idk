@@ -9,8 +9,12 @@ var form, player, game;
 
 let playerz
 
+let car1,car2,car3,car4;
+
+let carz;
+
 function setup(){
-  canvas = createCanvas(400,400);
+  canvas = createCanvas(displayWidth,displayHeight);
   database = firebase.database();
   game = new Game();
   game.getState();
@@ -19,6 +23,7 @@ function setup(){
 
 
 function draw(){
+
   if(playerCount == 4){
     game.update(1);
   }
